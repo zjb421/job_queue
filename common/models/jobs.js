@@ -11,8 +11,7 @@ var status
 worker.register({
     queue: function (params, callback) {
         try {
-            var reversed = params.text.split('').reverse().join('');
-            callback(null, reversed);
+            callback(null, params);
         } catch (err) {
             callback(err);
         }
